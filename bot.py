@@ -13,7 +13,7 @@ def get_question():
     qs = ""
     id = 1
     answer = 0
-    response = requests.get("http://127.0.0.1:8000/api/random/")
+    response = requests.get("http://intense-forest-59687.herokuapp.com/api/random/")
     data = json.loads(response.text)
     qs += "Question: \n"
     qs += data["title"] + "\n"
