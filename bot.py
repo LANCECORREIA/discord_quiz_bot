@@ -2,6 +2,9 @@ import json
 import requests
 import discord
 import asyncio
+from decouple import config
+
+token = config("TOKEN")
 
 client = discord.Client()
 
@@ -52,4 +55,4 @@ async def on_message(message):
             return
 
 
-client.run("OTg1NzgwODIzNTA2NzAyMzk2.G6i7mW.H7lBkf5Kf3t2kEj2BEdt1OUZIi1OBAkFjVxPNk")
+client.run(token)
