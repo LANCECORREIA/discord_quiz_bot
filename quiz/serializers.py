@@ -20,4 +20,5 @@ class QuestionSerializer(serializers.ModelSerializer):
         fields = [
             "title",
             "answer",
+            "points",
         ]
