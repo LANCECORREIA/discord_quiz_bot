@@ -13,7 +13,7 @@ def get_score():
     leaderboard = "LEADERBOARD\n\n"
     id = 1
     response = requests.get(
-        "http://intense-forest-59687.herokuapp.com/api/score/leaderboard"
+        "https://intense-forest-59687.herokuapp.com/api/score/leaderboard"
     )
     data = json.loads(response.text)
     for item in data:
@@ -25,7 +25,7 @@ def get_score():
 def update_score(user, points):
     new_points = {"name": user, "points": points}
     response = requests.post(
-        "http://intense-forest-59687.herokuapp.com/api/score/update", data=new_points
+        "https://intense-forest-59687.herokuapp.com/api/score/update", data=new_points
     )
     return
 
@@ -34,7 +34,7 @@ def get_question():
     qs = ""
     id = 1
     answer = 0
-    response = requests.get("http://intense-forest-59687.herokuapp.com/api/random/")
+    response = requests.get("https://intense-forest-59687.herokuapp.com/api/random/")
     data = json.loads(response.text)
     qs += "Question: \n"
     qs += data["title"] + "\n"
